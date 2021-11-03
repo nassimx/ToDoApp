@@ -1,0 +1,20 @@
+.xicon {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 30px;
+  font-size: 72px;
+  color: #c1fe00;
+  line-height: 72px;
+  text-align: right;
+}
+@media only screen and (max-width: 1024px) {
+  .x {
+    display: none;
+  }
+}
+@media only screen and (max-width: 512px) {
+  .x {
+    display: none;
+  }
+}

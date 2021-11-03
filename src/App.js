@@ -2,16 +2,14 @@ import React from 'react';
 
 import './App.css';
 import { AddTodo } from './Components/AddTodo';
+import Home from './Components/home';
+// import { TodoFilter } from './Components/TodoFilter';
 import { TodoList } from './Components/TodoList';
 
 function App() {
   return (
-    <div className="App">
-      <h2>to do app</h2>
-      <AddTodo />
-      <div>
-        <TodoList />
-      </div>
+    <div className="todo-app">
+      <Home />
     </div>
   );
 }

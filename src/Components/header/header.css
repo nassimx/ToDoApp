@@ -1,0 +1,28 @@
+
+.header {
+  display: flex;
+  /* background-color: gold; */
+  justify-content: space-between;
+  flex: 1;
+  /* padding-top: 20px; */
+  margin-right: auto;
+}
+.logo {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .logo {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 512px) {
+  .logo {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}

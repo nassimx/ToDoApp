@@ -1,0 +1,36 @@
+.topimgs {
+  display: -webkit-flex;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  justify-content: flex-end;
+
+  flex-direction: column;
+  position: fixed;
+
+  right: 0;
+}
+.img1 {
+  position: relative;
+}
+.img2 {
+  position: absolute;
+  top: 0px;
+  left: 115px;
+}
+.img3 {
+  position: absolute;
+  top: 0px;
+  left: 200px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .topimgs {
+    display: none;
+  }
+}
+@media only screen and (max-width: 512px) {
+  .topimgs {
+    display: none;
+  }
+}
