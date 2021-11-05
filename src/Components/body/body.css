@@ -18,10 +18,51 @@
   font-size: 20px;
   margin-bottom: 138px;
 }
+.box {
+  position: relative;
+  display: flex;
+  margin-top: 68px;
+  /* align-items: center; */
+  flex-direction: column;
+  flex: 1;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  /* left: 125px;
+  top: 359px; */
+  max-width: 750px;
+  max-height: 593px;
+  overflow-y: scroll;
+  padding-bottom: 50px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+/* ::-webkit-scrollbar-track {
+  background-color: #d5d5d5;
+} */
+::-webkit-scrollbar-thumb {
+  background-color: #acacac;
+  border-radius: 20px;
+}
+.topbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  margin-top: 35px;
+  margin-left: 40px;
+  /* padding-top: 35px; */
+}
+.btn-newtodo {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+}
 @media only screen and (max-width: 1024px) {
   .container {
     display: flex;
-
     margin-top: 20px;
     margin-left: 20px;
   }
@@ -36,6 +77,12 @@
     margin-top: -10px;
     font-size: 16px;
     margin-bottom: 47px;
+  }
+  .box {
+    margin-top: 34px;
+    margin-left: -10px;
+
+    margin-right: 10px;
   }
 }
 @media only screen and (max-width: 512px) {
@@ -58,4 +105,12 @@
     font-size: 16px;
     margin-bottom: 47px;
   }
+  .box {
+    margin-top: 34px;
+    margin-left: -10px;
+    margin-right: 10px;
+  }
+}
+.addnewtodo {
+  cursor: pointer;
 }

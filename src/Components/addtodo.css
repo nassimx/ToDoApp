@@ -8,6 +8,7 @@
   align-items: center;
 }
 .todo-input {
+  /* margin-bottom: 0px; */
   display: inline-block;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;

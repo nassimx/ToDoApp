@@ -6,19 +6,20 @@
   outline: none;
 }
 
-.brd {
-  border: 1px solid #e2eded;
-  border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
-}
+/* .brd {
+  border: 1px solid #e2eded; 
+   border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+} */
 
 #app-cover {
-  position: absolute;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
   width: 148px;
   height: 35px;
-  margin: 100px auto 0 auto;
+  margin-right: 40px;
+  margin-top: 35px;
 }
 
 #select-button {
@@ -46,6 +47,7 @@
 
 #selected-value {
   font-size: 16px;
+  font: bold;
   line-height: 1;
   margin-right: 26px;
 }
@@ -66,8 +68,8 @@
   top: 0;
   right: 0;
   bottom: 0;
-  width: 12px;
-  padding: 9px 14px;
+  /* width: 50px; */
+  padding: 9px 8px;
 }
 
 #chevrons i {
@@ -82,21 +84,22 @@
   color: #1d1d28;
 }
 
-.options {
+/* .options {
   position: absolute;
   left: 0;
   width: 250px;
-}
+} */
 
 #options {
   position: absolute;
-  top: 42px;
+  /* top: 42px; */
   right: 0;
   left: 0;
-  /* width: 169px; */
+  width: 169px;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
 }
 
 #options-view-button:checked ~ #options {
@@ -126,27 +129,12 @@
 .label {
   display: none;
   padding: 0;
-  margin-left: 27px;
+  /* margin-left: 27px; */
 }
 
 #options-view-button:checked ~ #options .label {
   display: block;
   padding: 12px 14px;
-}
-
-.s-c {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 50%;
-}
-
-.s-c.top {
-  top: 0;
-}
-
-.s-c.bottom {
-  bottom: 0;
 }
 
 input[type='radio'] {
@@ -160,26 +148,6 @@ input[type='radio'] {
   cursor: pointer;
 }
 
-.s-c:hover ~ i {
-  color: #fff;
-  opacity: 0;
-}
-
-.s-c:hover {
-  height: 100%;
-  z-index: 1;
-}
-
-.s-c.bottom:hover + i {
-  bottom: -25px;
-  animation: moveup 0.3s ease 0.1s forwards;
-}
-
-.s-c.top:hover ~ i {
-  top: -25px;
-  animation: movedown 0.3s ease 0.1s forwards;
-}
-
 @keyframes moveup {
   0% {
     bottom: -25px;
@@ -191,26 +159,15 @@ input[type='radio'] {
   }
 }
 
-@keyframes movedown {
-  0% {
-    top: -25px;
-    opacity: 0;
-  }
-  100% {
-    top: 0;
-    opacity: 1;
-  }
-}
-
 .label {
   transition: 0.3s ease all;
 }
 
 .opt-val {
   position: absolute;
-  left: 14px;
-  width: 217px;
-  height: 21px;
+  /* left: 5px; */
+  /* width: 217px; */
+  /* height: 21px; */
   opacity: 0;
   background-color: #fff;
   transform: scale(0);
@@ -226,11 +183,6 @@ input[type='radio'] {
   bottom: auto;
   opacity: 1;
   animation: unset;
-}
-
-.option input[type='radio']:checked ~ i,
-.option input[type='radio']:checked ~ .label {
-  color: #fff;
 }
 
 .option input[type='radio']:checked ~ .label:before {
@@ -251,33 +203,16 @@ input[type='radio'] {
   top: -30px;
 }
 
-.option:nth-child(1) input[type='radio']:checked ~ .label:before {
-  background-color: #000;
-  border-radius: 30px 30px 0 0;
-}
-
 .option:nth-child(1) input[type='radio']:checked ~ .opt-val {
   top: -31px;
-}
-
-.option:nth-child(2) input[type='radio']:checked ~ .label:before {
-  background-color: #ea4c89;
 }
 
 .option:nth-child(2) input[type='radio']:checked ~ .opt-val {
   top: -71px;
 }
 
-.option:nth-child(3) input[type='radio']:checked ~ .label:before {
-  background-color: #0057ff;
-}
-
 .option:nth-child(3) input[type='radio']:checked ~ .opt-val {
   top: -111px;
-}
-
-.option:nth-child(6) input[type='radio']:checked ~ .opt-val {
-  top: -231px;
 }
 
 #option-bg {
@@ -295,22 +230,44 @@ input[type='radio'] {
   display: block;
 }
 
-.option:hover .label {
-  color: #fff;
-}
+/* .option:hover .label {
+  color: #EAEBEF;
+} */
 
 .option:nth-child(1):hover ~ #option-bg {
   top: 0;
-  background-color: #000;
-  border-radius: 4px 4px 0 0;
+  background-color: #eaebef;
+  border-radius: 30px 30px 0 0;
 }
 
 .option:nth-child(2):hover ~ #option-bg {
   top: 40px;
-  background-color: #ea4c89;
+  background-color: #eaebef;
+  /* border-radius: 30px 30px 0 0; */
 }
 
 .option:nth-child(3):hover ~ #option-bg {
   top: 80px;
-  background-color: #0057ff;
+  background-color: #eaebef;
+  border-radius: 0 0 30px 30px;
+}
+
+.selectdiv {
+  /* margin-top: 35px; */
+  /* margin-left: 40px; */
+  margin-right: 20px;
+}
+
+.labelfilter {
+  position: relative;
+  height: 16px;
+  padding: 12px 14px;
+  /* background-color: #fff; */
+  border-radius: 100px;
+  cursor: pointer;
+}
+.selectfilter {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
 }

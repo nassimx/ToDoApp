@@ -1,9 +1,9 @@
 import React from 'react';
 import './todofilter.css';
-export const TodoFilter = () => {
+export const TodoFilter = ({ statusHandler }) => {
   return (
     <div>
-      <form id="app-cover">
+      {/* <form id="app-cover" onChange={statusHandler}>
         <div id="select-box">
           <input type="checkbox" id="options-view-button" />
           <div id="select-button" className="brd">
@@ -70,7 +70,19 @@ export const TodoFilter = () => {
             <div id="option-bg" />
           </div>
         </div>
-      </form>
+      </form> */}
+      <div className="selectdiv">
+        <label className="labelfilter">
+          <select className="selectfilter" onChange={statusHandler}>
+            <option selected id="selected-value">
+              ALL ITEMS
+            </option>
+
+            <option>COMPLETED</option>
+            <option>NOT COMPLETED</option>
+          </select>
+        </label>
+      </div>
     </div>
   );
 };

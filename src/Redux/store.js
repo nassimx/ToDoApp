@@ -1,8 +1,18 @@
-// import { configureStore } from '@reduxjs/toolkit';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-// export const store = configureStore({
+import rootReducer from './Reducer';
 
-//   reducer: {
-//     counter: counterReducer,
-//   },
-// });
+// @ts-ignore
+// const devtools =
+//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+// const store = createStore(rootReducer, devtools);
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(
+    applyMiddleware()
+    // other store enhancers if any
+  )
+);
+export default store;
