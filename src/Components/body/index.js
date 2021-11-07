@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { AddTodo } from '../AddTodo';
-import Modalcomp from '../Modalcomp';
-import { TodoFilter } from '../TodoFilter';
-import { TodoList } from '../TodoList';
+import { AddTodo } from '../addtodo/AddTodo';
+import Modalcomp from '../../Components/modal/Modalcomp';
+import { TodoFilter } from '../../Components/todofilter/TodoFilter';
+import { TodoList } from '../../Components/todolist/TodoList';
 import './body.css';
 
 function Body() {

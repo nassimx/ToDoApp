@@ -1,9 +1,4 @@
-import {
-  ADD_TASK,
-  EDIT_TASK,
-  DELETE_TASK,
-  COMPLETE_TASK,
-} from '../Types/ActionType';
+import { ADD_TASK, DELETE_TASK, COMPLETE_TASK } from '../Types/ActionType';
 
 const initialState = {
   tabTasks: [],
@@ -12,13 +7,6 @@ const taskReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ADD_TASK:
       return { ...state, tabTasks: [...state.tabTasks, payload] };
-    case EDIT_TASK:
-      return {
-        ...state,
-        tabTasks: state.tabTasks.map((el) =>
-          el.id === payload.id ? { ...el, task: payload.value } : el
-        ),
-      };
     case DELETE_TASK:
       return {
         ...state,

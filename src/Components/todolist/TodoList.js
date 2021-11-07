@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Todo } from './Todo';
+import { Todo } from '../todo/Todo';
 
 export const TodoList = ({ filteredTask }) => {
   const tabTasks = useSelector((state) => state.taskReducer.tabTasks);

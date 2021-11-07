@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './addtodo.css';
 import { useDispatch } from 'react-redux';
-import { add } from '../Redux/Action/TaskAction';
-// import Addtodobtn from './Addtodobtn';
+import { add } from '../../Redux/Action/TaskAction';
 
 export const AddTodo = () => {
   const dispatch = useDispatch();
@@ -27,7 +26,6 @@ export const AddTodo = () => {
           name="text"
           onChange={(e) => setTask(e.target.value)}
         />
-        {/* <Addtodobtn task={task} newItem={newItem} /> */}
         <button
           disabled={!task}
           className="todo-btn"

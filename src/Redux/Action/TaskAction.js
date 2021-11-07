@@ -1,9 +1,4 @@
-import {
-  ADD_TASK,
-  EDIT_TASK,
-  DELETE_TASK,
-  COMPLETE_TASK,
-} from '../Types/ActionType';
+import { ADD_TASK, DELETE_TASK, COMPLETE_TASK } from '../Types/ActionType';
 
 //payload :task id isDone
 export const add = (payload) => {
@@ -12,13 +7,7 @@ export const add = (payload) => {
     payload,
   };
 };
-//payload:id revisedOne
-export const editTask = (id, value) => {
-  return {
-    type: EDIT_TASK,
-    payload: { id, value },
-  };
-};
+
 //payload : id
 export const remove = (payload) => {
   return {

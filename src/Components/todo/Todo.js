@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { complete, remove } from '../Redux/Action/TaskAction';
+import { complete, remove } from '../../Redux/Action/TaskAction';
 import './todo.css';
 export const Todo = ({ item }) => {
   const dispatch = useDispatch();
