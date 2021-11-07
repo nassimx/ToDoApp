@@ -1,42 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { AddTodo } from '../AddTodo';
+import Modalcomp from '../Modalcomp';
 import { TodoFilter } from '../TodoFilter';
 import { TodoList } from '../TodoList';
-import styled from 'styled-components';
 import './body.css';
 
-import Modal from '../Modal';
-import OpenModalButton from '../OpenModalButton';
-
-const ModalContent = styled.div`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    color: #5c3aff;
-  }
-`;
-
 function Body() {
-  const [isOpen, toggle] = useState(false);
-
-  function handlOpenModal(open) {
-    console.log('close modal');
-    toggle(open);
-  }
   const todotasks = useSelector((state) => state.taskReducer.tabTasks);
-  // console.log(todotasks)
   const [status, setStatus] = useState('ALL ITEMS');
   const [filteredTask, setFilteredTask] = useState([]);
+  const [modalShow, setModalShow] = React.useState(false);
+
   //
   useEffect(() => {
     filteredHandler();
   }, [todotasks, status]);
-  // console.log(filteredTask);
-  // console.log(status);
   const statusHandler = (e) => {
     setStatus(e.target.value);
   };
@@ -55,10 +34,6 @@ function Body() {
         break;
     }
   };
-
-  // console.log(setStatus)
-
-  // console.log(todotasks);
   return (
     <div className="container">
       <div className="text">
@@ -70,16 +45,13 @@ function Body() {
         <div className="box">
           <div className="topbox">
             <h4 className="btn-newtodo">
-              To do list <i className="fas fa-plus-circle addnewtodo"></i>
+              To do list
+              <i
+                className="fas fa-plus-circle addnewtodo"
+                onClick={() => setModalShow(true)}
+              ></i>
             </h4>
-            <OpenModalButton handlClick={() => handlOpenModal(true)}>
-              Open modal
-            </OpenModalButton>
-            <Modal isOpen={isOpen} handleClose={() => handlOpenModal(false)}>
-              <ModalContent>
-                <h1> Awesome modal </h1>
-              </ModalContent>
-            </Modal>
+            <Modalcomp show={modalShow} onHide={() => setModalShow(false)} />
             <TodoFilter statusHandler={statusHandler} />
           </div>
           <div className="tasklist">

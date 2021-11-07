@@ -3,6 +3,7 @@
   flex-direction: column;
   margin-top: 150px;
   margin-left: 146px;
+  padding-bottom: 52px;
 }
 .text {
   display: flex;
@@ -21,6 +22,9 @@
 .box {
   position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin-top: 68px;
   /* align-items: center; */
   flex-direction: column;
@@ -34,6 +38,7 @@
   max-height: 593px;
   overflow-y: scroll;
   padding-bottom: 50px;
+  /* margin-bottom: 20px; */
 }
 ::-webkit-scrollbar {
   width: 6px;
@@ -49,12 +54,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-align: center;
   flex: 1;
   margin-top: 35px;
   margin-left: 40px;
   /* padding-top: 35px; */
 }
 .btn-newtodo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -65,6 +74,7 @@
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
+    /* margin-bottom: 20px; */
   }
   .title {
     font-weight: 700;
@@ -80,9 +90,13 @@
   }
   .box {
     margin-top: 34px;
-    margin-left: -10px;
+    margin-left: -15px;
 
     margin-right: 10px;
+  }
+  .addnewtodo {
+    cursor: pointer;
+    padding-left: 15px;
   }
 }
 @media only screen and (max-width: 512px) {
@@ -91,6 +105,7 @@
 
     margin-top: 20px;
     margin-left: 20px;
+    /* margin-bottom: 40px; */
   }
   .title {
     font-weight: 700;
@@ -106,11 +121,20 @@
     margin-bottom: 47px;
   }
   .box {
+    min-width: 355px;
     margin-top: 34px;
-    margin-left: -10px;
+    margin-left: -15px;
     margin-right: 10px;
+  }
+  .addnewtodo {
+    cursor: pointer;
+    padding-left: 15px;
+  }
+  .topbox {
+    margin-left: 20px;
   }
 }
 .addnewtodo {
   cursor: pointer;
+  padding-left: 10px;
 }

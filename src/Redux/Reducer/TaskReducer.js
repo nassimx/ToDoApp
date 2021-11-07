@@ -6,23 +6,7 @@ import {
 } from '../Types/ActionType';
 
 const initialState = {
-  tabTasks: [
-    // {
-    //   id: Math.random(),
-    //   task: 'Learn Redux',
-    //   isDone: true,
-    // },
-    // {
-    //   id: Math.random(),
-    //   task: 'Learn Mongodb',
-    //   isDone: false,
-    // },
-    // {
-    //   id: Math.random(),
-    //   task: 'build project',
-    //   isDone: false,
-    // },
-  ],
+  tabTasks: [],
 };
 const taskReducer = (state = initialState, { type, payload }) => {
   switch (type) {

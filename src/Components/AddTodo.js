@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './addtodo.css';
 import { useDispatch } from 'react-redux';
 import { add } from '../Redux/Action/TaskAction';
+// import Addtodobtn from './Addtodobtn';
 
 export const AddTodo = () => {
-  // const [input, setInput] = useState('');
   const dispatch = useDispatch();
   const [task, setTask] = useState('');
   const newItem = () => {
@@ -12,18 +12,10 @@ export const AddTodo = () => {
       dispatch(add({ task: task, isDone: false, id: Math.random() }));
       setTask('');
     } else {
-      <span>erorr</span>;
+      <h4>erorr</h4>;
     }
   };
 
-  // const handleinput = (e) => {
-  //   setInput(e.target.value);
-  // };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setInput('');
-  // };
   return (
     <div className="todo-div">
       <form className="todo-form">
@@ -35,7 +27,7 @@ export const AddTodo = () => {
           name="text"
           onChange={(e) => setTask(e.target.value)}
         />
-
+        {/* <Addtodobtn task={task} newItem={newItem} /> */}
         <button
           disabled={!task}
           className="todo-btn"
@@ -45,6 +37,14 @@ export const AddTodo = () => {
           Add <i className="fas fa-plus-circle plusicon"></i>
         </button>
       </form>
+      <button
+        disabled={!task}
+        className="todo-btnmobile"
+        type="submit"
+        onClick={newItem}
+      >
+        Add <i className="fas fa-plus-circle plusicon"></i>
+      </button>
     </div>
   );
 };

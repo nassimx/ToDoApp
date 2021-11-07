@@ -261,7 +261,7 @@ input[type='radio'] {
 .labelfilter {
   position: relative;
   height: 16px;
-  padding: 12px 14px;
+  /* padding: 12px 14px; */
   /* background-color: #fff; */
   border-radius: 100px;
   cursor: pointer;
