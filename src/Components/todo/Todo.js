@@ -7,7 +7,7 @@ export const Todo = ({ item }) => {
 
   return (
     <div>
-      <div className="task">
+      <div className="task animate__animated animate__fadeInDown">
         <label className="checkboxcon">
           <input type="checkbox" onClick={() => dispatch(complete(item.id))} />
           <span className="checkmark" />

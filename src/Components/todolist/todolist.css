@@ -1,6 +1,8 @@
 .todolist {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 20px;
+  position: fixed;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: column; */
+  /* align-items: center; */
 }

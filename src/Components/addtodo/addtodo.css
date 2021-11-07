@@ -1,20 +1,22 @@
 .todo-div {
   display: flex;
   align-items: center;
+  flex: 1;
 }
 .todo-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: column;
   align-items: center;
 }
 .todo-input {
-  display: inline-block;
+  display: flex;
+  flex-wrap: row;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-
   border: none;
   font: bold 60px / normal 'Roboto', sans-serif;
+  max-width: 350px;
   color: #1d1d28;
   -o-text-overflow: clip;
   text-overflow: clip;
@@ -47,7 +49,7 @@
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
   padding: 8px 24px 8px 24px;
   color: #f5f5f5;
-
+  margin-left: 200px;
   font-weight: 700;
   font: normal bold 16px/1 'Roboto', sans-serif;
   text-align: center;
@@ -74,22 +76,16 @@
   color: #7b7bd2;
 }
 @media only screen and (max-width: 1024px) {
-  .todo-btn {
-    display: none;
-  }
-  .plusicon {
-    display: none;
-  }
   .todo-btnmobile {
-    display: block;
+    /* display: block; */
     font-size: 24px;
     justify-content: center;
     /* padding-top: 5px; */
     left: 40px;
     right: 40px;
-    position: fixed;
+    position: relative;
     bottom: 0;
-    z-index: 1;
+    /* z-index: 1; */
     cursor: pointer;
     align-items: center;
     flex-direction: row;
@@ -125,8 +121,8 @@
     left: 40px;
     right: 40px;
     position: fixed;
-    bottom: 0;
-    z-index: 1;
+    bottom: 20px;
+    /* z-index: 1; */
     cursor: pointer;
     align-items: center;
     flex-direction: row;

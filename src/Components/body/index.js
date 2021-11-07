@@ -42,7 +42,7 @@ function Body() {
       </div>
       <AddTodo />
       {todotasks && todotasks.length ? (
-        <div className="box">
+        <div className="box animate__animated animate__bounceInUp">
           <div className="topbox">
             <h4 className="btn-newtodo">
               To do list

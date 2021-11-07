@@ -1,6 +1,7 @@
 import Button from '@restart/ui/esm/Button';
 import React from 'react';
 import { Modal } from 'react-bootstrap';
+import './modalcomp.css';
 
 function Modalcomp(props) {
   return (
@@ -10,6 +11,7 @@ function Modalcomp(props) {
         size="sm"
         aria-labelledby="contained-modal-title-vcenter"
         centered
+        contentClassName="modal"
       >
         <Modal.Body>
           <h2>Start a New List</h2>
