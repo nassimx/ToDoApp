@@ -22,7 +22,7 @@ function Modalcomp(props) {
           <div className="modal-btns">
             <Button
               className="btnmodal1"
-              onClick={() => window.location.reload(false)}
+              onClick={() => window.location.reload()}
             >
               Start New List
             </Button>
