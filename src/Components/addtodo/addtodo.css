@@ -16,7 +16,7 @@
   box-sizing: content-box;
   border: none;
   font: bold 60px / normal 'Roboto', sans-serif;
-  max-width: 350px;
+  max-width: 300px;
   color: #1d1d28;
   -o-text-overflow: clip;
   text-overflow: clip;
@@ -49,13 +49,10 @@
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
   padding: 8px 24px 8px 24px;
   color: #f5f5f5;
-  margin-left: 200px;
+  margin-left: 255px;
   font-weight: 700;
   font: normal bold 16px/1 'Roboto', sans-serif;
   text-align: center;
-
-  z-index: 99;
-
   width: 105px;
   height: 36px;
 }
@@ -76,16 +73,19 @@
   color: #7b7bd2;
 }
 @media only screen and (max-width: 1024px) {
-  .todo-btnmobile {
-    /* display: block; */
+  .todo-btn {
+    margin-left: 100px;
+  }
+  /* .todo-btnmobile {
+    display: block;
     font-size: 24px;
     justify-content: center;
-    /* padding-top: 5px; */
+    padding-top: 5px;
     left: 40px;
     right: 40px;
-    position: relative;
+    position: re;
     bottom: 0;
-    /* z-index: 1; */
+    z-index: 1;
     cursor: pointer;
     align-items: center;
     flex-direction: row;
@@ -98,10 +98,10 @@
     text-align: center;
     width: 296px;
     height: 46px;
-  }
-  .todo-btnmobile:disabled {
+  } */
+  /* .todo-btnmobile:disabled {
     opacity: 0.2;
-  }
+  } */
 }
 @media only screen and (max-width: 512px) {
   .todo-btn {
@@ -111,21 +111,20 @@
     display: none;
   }
   .todo-btnmobile {
-    display: block;
-  }
-  .todo-btnmobile {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     font-size: 24px;
     justify-content: center;
     /* padding-top: 5px; */
     left: 40px;
     right: 40px;
     position: fixed;
-    bottom: 20px;
+    bottom: 0;
+
     /* z-index: 1; */
     cursor: pointer;
     align-items: center;
-    flex-direction: row;
     background: #1d1d28;
     border-radius: 100px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);

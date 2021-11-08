@@ -6,7 +6,7 @@ export const TodoFilter = ({ statusHandler }) => {
       <div className="selectdiv">
         <label className="labelfilter">
           <select className="selectfilter" onChange={statusHandler}>
-            <option selected id="selected-value">
+            <option id="selected-value">
               ALL ITEMS
             </option>
             <option>COMPLETED</option>
