@@ -8,19 +8,28 @@ function Modalcomp(props) {
     <div>
       <Modal
         {...props}
-        size="sm"
+        size="md"
         aria-labelledby="contained-modal-title-vcenter"
         centered
         contentClassName="modal"
       >
-        <Modal.Body>
-          <h2>Start a New List</h2>
-          <span>
+        <Modal.Body className="modalbody">
+          <h2 className="modal-title">Start a New List</h2>
+          <span className="modaldisc">
             When you start a new list, your existing list will be deleted. Would
             you like to start a new list?
           </span>
-          <Button>Start New List</Button>
-          <Button onClick={props.onHide}>Keep Existing</Button>
+          <div className="modal-btns">
+            <Button
+              className="btnmodal1"
+              onClick={() => window.location.reload(false)}
+            >
+              Start New List
+            </Button>
+            <Button className="btnmodal2" onClick={props.onHide}>
+              Keep Existing
+            </Button>
+          </div>
         </Modal.Body>
       </Modal>
     </div>
